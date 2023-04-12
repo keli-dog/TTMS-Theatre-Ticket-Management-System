@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class user {
     @RequestMapping("/hello")
     public String hello(){
-        return "先亲程程后摸腿，我是莽村李宏伟";
+        return "先亲程程后摸腿  ，我是莽村李宏伟";
     }
 }
