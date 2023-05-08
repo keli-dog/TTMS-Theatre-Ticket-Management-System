@@ -1,10 +1,10 @@
-package com.example.mytest_springboot.controller;
+package com.example.main.controller;
 
 import java.sql.*;
 
 public class jdbc {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.cj.jdbc.Driver");
+        //Class.forName("com.mysql.cj.jdbc.Driver");
         Connection connection = DriverManager.getConnection("jdbc:mysql:///232haoqingnian?user=root&password=root");
         String sql="select * from love";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
