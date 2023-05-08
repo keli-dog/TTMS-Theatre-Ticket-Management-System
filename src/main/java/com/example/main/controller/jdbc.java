@@ -12,7 +12,7 @@ public class jdbc {
         while(resultSet.next()){
             Object name = resultSet.getObject("name");
             Object days = resultSet.getObject("days");
-            System.out.println(name+""+days);
+            System.out.println(name+"   "+days);
         }
     }
 }
