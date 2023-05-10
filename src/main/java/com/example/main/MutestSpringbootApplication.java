@@ -37,6 +37,7 @@ public class MutestSpringbootApplication{
 
     public static void main(String[] args) {
         SpringApplication.run(MutestSpringbootApplication.class, args);
-        System.out.println("sfefef");
+        System.out.println("测试代码，运行成功");
     }
+
 }

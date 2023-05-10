@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.example.main.entity.TestLove;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 import org.mybatis.spring.annotation.MapperScan;
 
 // 这里说下编程的思路（仅个人意见）：写代码的顺序从底层代码写起
@@ -11,9 +12,14 @@ import org.mybatis.spring.annotation.MapperScan;
 @MapperScan("com.example.main.mapper")
 public interface TestLoveMapper {
 
+    @Select( "select * from love")
+    public List<TestLove> geTestUsers() throws Exception;
+
+
+
     // 这里我们先规划：我们要去跟增删改查
 // 1, 查数据
-    public List<TestLove> geTestUsers() throws Exception;
+    //public List<TestLove> geTestUsers() throws Exception;
 
     // 2，改数据
     public void updateTestUser(TestLove testUser) throws Exception;
