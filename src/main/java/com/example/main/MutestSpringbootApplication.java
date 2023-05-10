@@ -1,4 +1,4 @@
-package com.example.main;
+/*package com.example.main;
 
 import com.example.main.controller.Pet;
 import org.springframework.boot.SpringApplication;
@@ -23,4 +23,20 @@ public class MutestSpringbootApplication {
         System.out.println("先亲程程后摸腿，我是莽村李宏伟");
     }
 
+}
+*/
+package com.example.main;
+
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@MapperScan("com.example.main.mapper") // 这个配置和上面的mapper配置中@Mapper 相互作用才能正常读到mapper
+public class MutestSpringbootApplication{
+
+    public static void main(String[] args) {
+        SpringApplication.run(MutestSpringbootApplication.class, args);
+        System.out.println("sfefef");
+    }
 }

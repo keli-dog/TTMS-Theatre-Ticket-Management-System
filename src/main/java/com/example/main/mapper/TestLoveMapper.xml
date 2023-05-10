@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.main.mapper.TestLoveMapper">
+    <!-- 对应查数据，带返回值，无参数入力 -->
+    <select id="geTestUsers" resultType="com/example/main/entity/TestLove">
+        select * from love
+    </select>
+
+    <!-- 新增用户，不带返回值，带入力参数 -->
+<!--    <insert id="addTestUser" parameterType="com.cun.entity.TestUser">-->
+<!--        insert into test_user(user_no,user_name,user_sex) values(#{testUserNo},#{testUserName},${testUserSex})-->
+<!--    </insert>-->
+
+<!--    <delete id="deleteTestUser" parameterType="Integer">-->
+<!--        delete from test_user where user_no = #{testUserNo}-->
+<!--    </delete>-->
+</mapper>
