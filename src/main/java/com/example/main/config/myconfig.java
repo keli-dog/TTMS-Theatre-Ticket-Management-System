@@ -1,6 +1,6 @@
 package com.example.main.config;
 
-import com.example.main.controller.Pet;
+import com.example.main.entity.Pet;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

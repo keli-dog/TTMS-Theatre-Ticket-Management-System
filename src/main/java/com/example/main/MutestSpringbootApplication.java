@@ -1,6 +1,6 @@
 /*package com.example.main;
 
-import com.example.main.controller.Pet;
+import com.example.main.entity.Pet;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -30,13 +30,19 @@ package com.example.main;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 @MapperScan("com.example.main.mapper") // 这个配置和上面的mapper配置中@Mapper 相互作用才能正常读到mapper
 public class MutestSpringbootApplication{
 
     public static void main(String[] args) {
-        SpringApplication.run(MutestSpringbootApplication.class, args);
+        ConfigurableApplicationContext run = SpringApplication.run(MutestSpringbootApplication.class, args);
+        //获取全部组件
+        String[] names=run.getBeanDefinitionNames();
+        for (String name: names) {
+            System.out.println(name);
+        }
         System.out.println("测试代码，运行成功");
     }
 

@@ -12,6 +12,7 @@ import lombok.Setter;
 @Component
 public class TestLove {
 
+
     private String name;
 
     private int days;
@@ -19,5 +20,8 @@ public class TestLove {
     private String number_meet;
     private String number_leave;
     private int id;
+
+
+
 
 }

@@ -7,11 +7,11 @@
     </select>
 
     <!-- 新增用户，不带返回值，带入力参数 -->
-<!--    <insert id="addTestUser" parameterType="com.cun.entity.TestUser">-->
-<!--        insert into test_user(user_no,user_name,user_sex) values(#{testUserNo},#{testUserName},${testUserSex})-->
-<!--    </insert>-->
+    <insert id="addTestUser" parameterType="com/example/main/entity/TestLove">
+        insert into love(name, days, number_meet, number_leave, id) values(#{name},#{days},${number_meet},${number_leave},${id})
+    </insert>
 
-<!--    <delete id="deleteTestUser" parameterType="Integer">-->
-<!--        delete from test_user where user_no = #{testUserNo}-->
-<!--    </delete>-->
+    <delete id="deleteTestUser" parameterType="Integer">
+        delete from love where id = #{id}
+    </delete>
 </mapper>

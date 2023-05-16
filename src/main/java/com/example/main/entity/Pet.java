@@ -1,4 +1,4 @@
-package com.example.main.controller;
+package com.example.main.entity;
 
 public class Pet {
     public String name;

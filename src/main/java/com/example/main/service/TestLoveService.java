@@ -7,7 +7,7 @@ import java.util.List;
 import com.example.main.entity.TestLove;
 import org.springframework.stereotype.Service;
 
-@Service // 这里接口不加这个注解
+//@Service // 这里接口不加这个注解
 public interface TestLoveService {
 
     public List<TestLove> geTestUsers() throws Exception;
