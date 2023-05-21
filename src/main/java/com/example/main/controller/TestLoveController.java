@@ -3,17 +3,10 @@ package com.example.main.controller;
 import java.util.List;
 import java.util.Random;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import com.example.main.entity.TestLove;
-import com.example.main.mapper.TestLoveMapper;
 import com.example.main.service.TestLoveService;
 
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -29,16 +22,15 @@ public class TestLoveController {
 
     @Autowired
     private TestLoveService service;
-// 这个你也可以不用注解的方式，自己new
-   @Autowired
-   TestLove user = new TestLove();
-
-   Integer testUserNo=5;
+   // 这个你也可以不用注解的方式，自己new
+    /*@Autowired
+    TestLove user = new TestLove();
+    @Autowired
+    Integer testUserNo=18;*/
 
     // 显示使用者
     @RequestMapping("/showUser")
     @ResponseBody
-    //
     public List<TestLove> showList() throws Exception {
         List<TestLove> users = service.geTestUsers();
         System.out.println(users);
@@ -75,6 +67,7 @@ public class TestLoveController {
     @RequestMapping("/deleteUser")
     @ResponseBody
     public String deleteUser(Integer testUserNo) throws Exception {
+        testUserNo=18;
         List<TestLove> users = service.geTestUsers();
         TestLove deluser=null;
         for (TestLove user: users) {

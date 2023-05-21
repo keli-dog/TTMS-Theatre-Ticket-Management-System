@@ -5,13 +5,6 @@
 <!--    <router-link to="/test">New Page</router-link>-->
   </div>
 </template>
-
-<script>
-export default {
-  name: 'App'
-}
-</script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -19,6 +12,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /*margin-top: 60px;*/
 }
 </style>
