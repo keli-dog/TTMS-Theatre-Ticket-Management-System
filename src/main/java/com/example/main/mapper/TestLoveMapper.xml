@@ -1,0 +1,17 @@
+<mapper namespace="com.example.main.mapper.TestLoveMapper">
+    <select id="geTestUsers" resultType="com.example.main.entity.TestLove">
+        select * from love
+    </select>
+
+    <update id="updateTestUser">
+        update love set name=#{name} where id=#{id}
+    </update>
+
+    <insert id="addTestUser">
+        insert into love(name, days, number_meet, number_leave) values(#{name},#{days},#{number_meet},#{number_leave})
+    </insert>
+
+    <delete id="deleteTestUser">
+        delete from love where id=#{id}
+    </delete>
+</mapper>
